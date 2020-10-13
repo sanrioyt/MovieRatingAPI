@@ -1,2 +1,2 @@
-# movieRatingAPI
+# MovieRatingAPI
 RESTful API for movies. 
