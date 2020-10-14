@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from .models import Movie, Rating
 
 class UserSerializer(serializers.ModelSerializer):
+    """ Serializer for User object """
     class Meta:
         model = User
         fields = ('id', 'username', 'password')
@@ -15,12 +16,14 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 class MovieSerializer(serializers.ModelSerializer):
+    """ Serializer for Movie object """
     class Meta:
         model = Movie
         fields = ['id', 'title', 'description', 'no_of_ratings', 'avg_ratings']
 
 
 class RatingSerializer(serializers.ModelSerializer):
+    """ Serializer for Rating object """
     class Meta:
         model = Rating
         fields = ['id', 'movie', 'user', 'stars']
